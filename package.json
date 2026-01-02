@@ -2,14 +2,14 @@
   "name": "copy-of-culturebridge-pro-–-epistemic-probe",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "module",https://github.com/Jingrui99/New_Culture-Bridge/blob/main/package.json#L24C27
 
- "homepage": "https://Jingrui99.github.io/Culture-Bridge",
+  "homepage": "https://Jingrui99.github.io/Culture-Bridge",
   
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -22,6 +22,7 @@
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
     "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "gh-pages": "^5.0.0"
   }
 }
