@@ -1,11 +1,9 @@
 {
-  "name": "copy-of-culturebridge-pro-epistemic-probe",
+  "name": "culturebridge-pro-epistemic-probe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
   "homepage": "https://Jingrui99.github.io/Culture-Bridge",
-  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -26,3 +24,4 @@
     "gh-pages": "^5.0.0"
   }
 }
+
