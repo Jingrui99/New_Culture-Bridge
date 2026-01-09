@@ -1,13 +1,14 @@
-
 import React, { useCallback, useRef, useState } from 'react';
-import { MusicalNote } from '../types';
+import { MusicalNote, Language } from '../types';
+import { UI_STRINGS } from '../constants';
 
 interface MelodyRefProps {
   notes: MusicalNote[];
-  label?: string;
+  lang?: Language;
 }
 
-const MelodyRef: React.FC<MelodyRefProps> = ({ notes, label }) => {
+const MelodyRef: React.FC<MelodyRefProps> = ({ notes, lang = 'en' }) => {
+  const strings = UI_STRINGS[lang];
   const audioCtxRef = useRef<AudioContext | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -60,7 +61,7 @@ const MelodyRef: React.FC<MelodyRefProps> = ({ notes, label }) => {
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
       </svg>
-      {isPlaying ? 'Playing Ref...' : 'Play Reference'}
+      {isPlaying ? strings.playingRef : strings.playRef}
     </button>
   );
 };

@@ -1,4 +1,3 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import { EpistemicProbeResult, EpistemicStatus } from "../types";
 
@@ -10,6 +9,7 @@ export async function runEpistemicProbe(
   userInput: string,
   lang: string
 ): Promise<EpistemicProbeResult> {
+  const languageName = lang === 'zh' ? 'Chinese' : 'English';
   const prompt = `
     You are an AI performing an 'Epistemic Probe' for a cross-cultural music research project.
     Your task is NOT to generate music, but to diagnose your own boundaries of understanding when translating between two musical epistemic systems.
@@ -17,7 +17,7 @@ export async function runEpistemicProbe(
     Source System: ${sourceSystem}
     Target System: ${targetSystem}
     User Element: ${userInput}
-    Response Language: ${lang === 'zh' ? 'Chinese' : 'English'}
+    Response Language Requirement: ALL text fields in the JSON response (title, description, details, question, options) MUST be written in ${languageName}.
 
     Analyze the input based on:
     1. Geographic Origin: Do you understand the specific locale and cultural lineage?
@@ -28,12 +28,12 @@ export async function runEpistemicProbe(
     Categorize each into one of: UNDERSTOOD, MISUNDERSTOOD, REFUSED.
     
     Also generate:
-    - 3 specific 'Composer Tasks': Questions that force the human composer to make an ethical or aesthetic decision about your interpretation. Use unique IDs for each.
-    - 2 'Propositions': Short melodic sketches. 
+    - 3 specific 'Composer Tasks': Questions in ${languageName} that force the human composer to make an ethical or aesthetic decision about your interpretation. Use unique IDs for each.
+    - 2 'Propositions': Short melodic sketches with titles and descriptions in ${languageName}. 
       For each sketch, provide a 'notes' array of objects: { pitch (MIDI), start (seconds), duration (seconds) }. 
       Ensure the sketch is about 5-10 seconds long and reflects the cultural tension described.
 
-    Return the result in JSON.
+    Return the result in JSON strictly following the provided schema.
   `;
 
   const response = await ai.models.generateContent({

@@ -1,16 +1,13 @@
-import React from 'react';
-
 export const UI_STRINGS = {
   en: {
     title: 'CultureBridge Pro',
     subtitle: 'Epistemic Probe',
-    authors: 'Jingrui Han, Patrick Springford, Clinton Watkins',
-    institution: 'AUT University',
     theme: 'Communities & Epistemic Systems',
     inputHeader: 'Musical Episteme Input',
     sourceSystem: 'Source Knowledge System',
     targetSystem: 'Target Knowledge System',
     inputPlaceholder: 'Describe a specific cultural musical element (e.g., "Jiangnan Xiao Diao")...',
+    inputContext: 'Input Element Context',
     initiateButton: 'Initiate Epistemic Probe',
     safetyTitle: 'Safety & Responsibility',
     safetyDesc: 'Generated sound is not music, but a diagnostic sonification. Sounds serve only as annotations of AI understanding state.',
@@ -25,18 +22,37 @@ export const UI_STRINGS = {
       MISUNDERSTOOD: 'Misunderstood',
       REFUSED: 'Refused'
     },
+    mappingLabels: {
+      locale: 'Locale',
+      tonal: 'Tonal Logic',
+      entropy: 'Entropy',
+      refusal: 'Refusal'
+    },
+    feedbackTitle: 'Human Epistemic Feedback',
+    validateAccuracy: 'Validate AI Accuracy:',
+    playingRef: 'Playing Ref...',
+    playRef: 'Play Reference',
+    pianoRollLabel: 'Piano Roll Visualization',
+    diagnosticIdle: 'Diagnostic Idle',
+    diagnosticIdleDesc: 'Provide a musical element on the left to initiate the probe. The system will analyze cultural untranslatability and generate MIDI-based sketches.',
+    synthesizing: 'Synthesizing Epistemic Trace',
+    synthesizingDesc: 'Evaluating cross-cultural dissonance levels...',
+    modality: 'Modality: Text-to-MIDI Synthesis',
+    systemStatus: 'SYSTEM_STATUS: ACTIVE',
+    generatedId: 'GENERATED_ID',
+    codebase: 'CODEBASE',
+    footerDisclaimer: 'Diagnostic visualization only. Output notes reflect AI error states, not musical composition.',
     version: 'Project Version: CultureBridge v4.0.0-PRO'
   },
   zh: {
     title: 'CultureBridge Pro',
     subtitle: '认识论探针 (Epistemic Probe)',
-    authors: '韩静瑞, Patrick Springford, Clinton Watkins',
-    institution: '奥克兰理工大学 (AUT University)',
     theme: '社区与认识论系统',
     inputHeader: '音乐认识论输入',
     sourceSystem: '来源知识系统',
     targetSystem: '目标知识系统',
     inputPlaceholder: '描述某个具体文化音乐元素（如“江南小调”）...',
+    inputContext: '输入元素语境',
     initiateButton: '启动认识论探针',
     safetyTitle: '安全与责任提醒',
     safetyDesc: '生成的声音不是音乐，而是诊断性注释。声音仅作为 AI 理解状态的提示。',
@@ -51,6 +67,26 @@ export const UI_STRINGS = {
       MISUNDERSTOOD: '可能误解',
       REFUSED: '文化拒绝'
     },
+    mappingLabels: {
+      locale: '地域来源',
+      tonal: '音律逻辑',
+      entropy: '信息熵',
+      refusal: '文化拒绝'
+    },
+    feedbackTitle: '人类认识论反馈',
+    validateAccuracy: '验证 AI 准确性:',
+    playingRef: '正在播放...',
+    playRef: '播放参考音轨',
+    pianoRollLabel: '钢琴卷轴可视化',
+    diagnosticIdle: '诊断闲置中',
+    diagnosticIdleDesc: '在左侧提供音乐元素以启动探针。系统将分析文化不可翻译性并生成基于 MIDI 的草案。',
+    synthesizing: '正在合成认识论踪迹',
+    synthesizingDesc: '正在评估跨文化不协和等级...',
+    modality: '模态: 文本至 MIDI 合成',
+    systemStatus: '系统状态: 激活',
+    generatedId: '生成编号',
+    codebase: '代码库',
+    footerDisclaimer: '仅供诊断可视化。输出音符反映 AI 错误状态，而非音乐创作。',
     version: '项目版本: CultureBridge v4.0.0-PRO'
   }
 };

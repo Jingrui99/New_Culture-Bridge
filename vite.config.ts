@@ -5,7 +5,6 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: '/Culture-Bridge/',   // ←【关键！必须是你的仓库名】
       server: {
         port: 3000,
         host: '0.0.0.0',
